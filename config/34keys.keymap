@@ -5,10 +5,6 @@
 #include "oled.dtsi"
 #include "34keys.h"
 
-&sk {
-  release-after-ms = <2000>;
-};
-
 / {
 
   keymap {
@@ -33,11 +29,11 @@
       label = "NAV";
       bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp ESC       XXX           &kp LG(F)     XXX           &kp INS           &kp PG_UP     &kp HOME      &kp UP        &kp END       XXX
+             XXX           XXX           &kp LG(F)     &kp ESC       &kp INS           &kp PG_UP     &kp HOME      &kp DEL       &kp END       XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &sk LCTRL     &sk LALT      &sk LSHIFT    &sk LGUI      &sk RALT          &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp DEL
+             &sk LCTRL     &sk LALT      &sk LSHIFT    &sk LGUI      &sk RALT          &kp PG_DN     &kp ENTER     &kp UP        &kp TAB       XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp TAB       &kp LG(V)         &kp TAB       &kp ENTER     XXX           XXX           XXX
+             &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(L)     &kp LG(V)         &kp LA(BSPC)  &kp LEFT      &kp DOWN      &kp RIGHT     XXX
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                        ___           &mo FUN           &kp BSPC      ___
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
@@ -48,7 +44,7 @@
       label = "SYMBOLS";
       bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCT          &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS
+             &kp EXCL      &kp AT        &kp RA(N3)    &kp DLLR      &kp PRCT          &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &kp SEMI      &kp COLON     &kp LBRC      &kp LPRN      &kp LBKT          &kp STAR      &kp N4        &kp N5        &kp N6        &kp MINUS
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
