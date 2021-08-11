@@ -25,6 +25,9 @@ sweep: zmk
 sweep-peripheral: zmk 
 	$(call _build,nice_nano_v2,cradio_right,Sweep-P)
 
+settings-reset: zmk
+	$(call _build,nice_nano_v2,settings_reset,Reset)
+
 all: $(builds)
 
 zmk:
