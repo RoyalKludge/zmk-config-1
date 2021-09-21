@@ -32,10 +32,9 @@ all: $(builds)
 
 zmk:
 	${docker_run} sh -c '\
-		git clone https://github.com/zmkfirmware/zmk .; \
-		git remote add -ft macros okke-formsa https://github.com/okke-formsma/zmk; \
-		git merge okke-formsa/macros --no-edit; \
-		west init -l app; \
+    git clone https://github.com/petejohanson/zmk.git . ; \
+    git checkout ble/defer-connection-param-upgarade-while-pairing ; \
+    west init -l app; \
 		west update'
 
 fresh:
